@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const SkillsSection = () => {
   return (
-    <section className="bg-gradient-to-br from-indigo-800 via-gray-900 to-gray-700 text-white py-20 px-6 mt-2">
-      <h2 className="text-4xl font-bold text-center mb-16 text-white">🛠️ Skills</h2>
+    <section className="overflow-x-hidden bg-gradient-to-b from-gray-900 via-blue-600 to-gray-700 py-20 px-4 text-white mt-2">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-12">🛠️ Skills</h2>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
         {skills.map((skill, index) => (
