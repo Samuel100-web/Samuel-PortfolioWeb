@@ -10,15 +10,36 @@ function Navbar() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
-    // Dummy visitor count
+    // Dummy visitor count (optional: replace with real API later)
     setVisitorCount(Math.floor(Math.random() * 100) + 1);
 
-    window.addEventListener("scroll", () => {
-      window.gtag && window.gtag("event", "scroll", { event_category: "Interaction" });
-    });
-    window.addEventListener("click", () => {
-      window.gtag && window.gtag("event", "click", { event_category: "Interaction" });
-    });
+    // GA: Track scroll events
+    const handleScroll = () => {
+      if (window.gtag) {
+        window.gtag("event", "scroll", {
+          event_category: "Interaction",
+          event_label: "User scrolled the page",
+        });
+      }
+    };
+
+    // GA: Track click events
+    const handleClick = () => {
+      if (window.gtag) {
+        window.gtag("event", "click", {
+          event_category: "Interaction",
+          event_label: "User clicked on the page",
+        });
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("click", handleClick);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("click", handleClick);
+    };
   }, []);
 
   return (
@@ -66,6 +87,18 @@ function Navbar() {
         <Link onClick={toggleMenu} className="nav-link block" to="/">Home</Link>
         <Link onClick={toggleMenu} className="nav-link block" to="/about">About Me</Link>
         <Link onClick={toggleMenu} className="nav-link block" to="/contact">Contact</Link>
+
+        {/* Optional: Analytics in mobile menu too */}
+        <button
+          onClick={() => {
+            toggleMenu();
+            setShowAnalytics(true);
+          }}
+          className="nav-link block text-yellow-400"
+        >
+          <FaChartBar className="inline mr-2" />
+          Analytics
+        </button>
       </div>
 
       {/* Analytics Modal */}
