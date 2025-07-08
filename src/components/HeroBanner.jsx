@@ -33,7 +33,7 @@ const HeroBanner = () => {
   // ✅ Static Data
   const fullName = "SAMUEL YAQOOB";
   const email = "yaqoobsamuel100@outlook.com";
-  const phone = "+92 307 5941977";
+  const phone = "+92 307 5941955";
   const profileImageUrl = portfolioImage; // put image in public folder
 
   return (

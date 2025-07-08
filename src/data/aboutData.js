@@ -1,7 +1,7 @@
 export const aboutData = {
   fullName: "Samuel Yaqoob",
   email: "yaqoobsamuel100@outlook.com",
-  phone: "+92 307 5941977",
+  phone: "+92 307 5941955",
   profileImageUrl: "/images/portfolioPic.jpg",
   bio: `
     <h3 class="text-xl font-semibold text-indigo-400 mb-2">👋 Hi, I'm Samuel</h3>
