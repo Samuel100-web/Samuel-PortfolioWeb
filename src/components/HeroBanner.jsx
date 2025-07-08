@@ -4,7 +4,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import portfolioImage from "../../images/portfolioPic.jpg";
+import portfolioImage from "../images/portfolioPic.jpg";
 
 
 const HeroBanner = () => {
