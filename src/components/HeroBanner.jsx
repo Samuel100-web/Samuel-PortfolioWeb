@@ -4,6 +4,7 @@ import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import {portfolioImage} from "../../src/images/portfolioPic.jpg"
 
 
 const HeroBanner = () => {
@@ -33,7 +34,7 @@ const HeroBanner = () => {
   const fullName = "SAMUEL YAQOOB";
   const email = "yaqoobsamuel100@outlook.com";
   const phone = "+92 307 5941977";
-  const profileImageUrl = "../../src/images/portfolioPic.jpg"; // put image in public folder
+  const profileImageUrl = portfolioImage; // put image in public folder
 
   return (
     <section className="relative overflow-x-hidden bg-gradient-to-br from-indigo-900 via-gray-900 to-black text-white px-4 sm:px-6 pt-12 sm:pt-16 pb-10 mt-2">
